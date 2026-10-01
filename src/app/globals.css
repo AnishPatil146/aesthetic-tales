@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #0a0a0c;
+  --bg-dark-elevated: #121215;
+  --bg-dark-card: #18181c;
+  --text-primary: #faf8f5;
+  --text-secondary: #c8c2b7;
+  --text-muted: #8c867d;
+  --accent-gold: #c5a880;
+  --accent-gold-light: #e0ceb7;
+  --accent-gold-dark: #9e825a;
+  --border-subtle: rgba(250, 248, 245, 0.08);
+  --border-gold: rgba(197, 168, 128, 0.25);
+}
+
+@theme {
+  --font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-charcoal-950: #0a0a0c;
+  --color-charcoal-900: #121215;
+  --color-charcoal-800: #18181c;
+  --color-charcoal-700: #24242a;
+  --color-ivory: #faf8f5;
+  --color-ivory-soft: #f2eee8;
+  --color-champagne: #d5c8b8;
+  --color-gold: #c5a880;
+  --color-gold-light: #e0ceb7;
+  --color-gold-muted: #9e825a;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom luxury typography classes */
+.font-display {
+  font-family: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-editorial {
+  font-family: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+/* Subtle luxury grain/glow/editorial styling */
+.text-balance {
+  text-wrap: balance;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f4efe6 0%, #c5a880 50%, #e2d2bd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom delicate borders */
+.border-luxury {
+  border-color: rgba(250, 248, 245, 0.08);
+}
+
+.border-luxury-gold {
+  border-color: rgba(197, 168, 128, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #24242a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
